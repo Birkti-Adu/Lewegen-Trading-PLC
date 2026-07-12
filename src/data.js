@@ -96,13 +96,13 @@ export const stats = [
 
 export const news = [
   {
-    id: 'erp-launch',
-    title: 'Company Name Launches Integrated ERP & EMR Platform for Healthcare',
-    category: 'Product',
-    date: 'June 12, 2026',
-    readTime: '4 min read',
+    id: 'hdama-contract',
+    title: 'Major Breaking News: Lewegen PLC Trading Signs Contract with HDAMA',
+    category: 'Company',
+    date: 'July 11, 2026',
+    readTime: '2 min read',
     excerpt:
-      'Our new healthcare suite unifies electronic medical records with enterprise resource planning, streamlining clinical workflows for hospitals across the region.',
+      'Lewegen PLC Trading has signed a landmark agreement with HDAMA to expand trusted partnerships, strengthen service delivery, and support sustainable impact across core business operations.',
   },
   {
     id: 'women-in-tech',

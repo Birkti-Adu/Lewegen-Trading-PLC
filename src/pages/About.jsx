@@ -3,6 +3,7 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import Icon from '../components/Icon'
+import AboutImage from '../assets/About.png'
 import { team, partners, stats } from '../data'
 
 const values = [
@@ -37,6 +38,7 @@ export default function About() {
         eyebrow="About Us"
         title="Lewegen Trading PLC"
         subtitle="A business initiative established by HDAMA to create sustainable income and expand social impact through quality consultancy, agentship, and transport services."
+        image={AboutImage}
         primary={{ label: 'Our Story', to: '/about' }}
         secondary={{ label: 'Contact Us', to: '/contact' }}
       />

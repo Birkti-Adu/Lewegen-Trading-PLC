@@ -4,6 +4,7 @@ import Typewriter from '../components/Typewriter'
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import { services, projects, partners, industries, stats } from '../data'
+import Lewegen from '../assets/Lewegen.png'
 
 export default function Home() {
   return (
@@ -68,23 +69,12 @@ export default function Home() {
           <div className="lg:col-span-3">
             <Reveal delay={200} className="relative lg:mr-16">
               <div className="absolute inset-0 -z-10 animate-glow rounded-full bg-brand-500/40 blur-3xl" />
-              <div className="flex aspect-[3/4] w-full animate-float items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-white/5 text-center backdrop-blur-sm">
-                <div className="px-6 text-sm font-medium text-slate-400">
-                <svg
-                  className="mx-auto mb-3 h-10 w-10 text-slate-500"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <circle cx="8.5" cy="8.5" r="1.5" />
-                  <path d="M21 15l-5-5L5 21" />
-                </svg>
-                  Your image here
-                </div>
+              <div className="mx-auto flex aspect-[3/4] w-full max-w-[420px] animate-float items-center justify-center overflow-hidden rounded-3xl border border-white/15 bg-white/5 text-center backdrop-blur-sm lg:max-w-[460px] lg:scale-[1.08]">
+                <img
+                  src={Lewegen}
+                  alt="Lewegen Trading PLC"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </Reveal>
           </div>

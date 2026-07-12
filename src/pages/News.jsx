@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero'
 import SectionHeading from '../components/SectionHeading'
 import Reveal from '../components/Reveal'
 import Icon from '../components/Icon'
+import Lewegen from '../assets/Lewegen.png'
 import { news } from '../data'
 
 const categories = ['All', ...new Set(news.map((n) => n.category))]
@@ -19,8 +20,8 @@ export default function News() {
     <>
       <PageHero
         eyebrow="News & Updates"
-        title="The Latest From Company Name"
-        subtitle="Product launches, company milestones, and insights from our team building secure, scalable digital solutions."
+        title="The Latest From Lewegen Trading PLC"
+        subtitle="Breaking news, milestones, and updates from Lewegen Trading PLC as we grow trusted partnerships and deliver sustainable impact."
         primary={{ label: 'Read Updates', to: '/news' }}
         secondary={{ label: 'Contact Sales', to: '/contact' }}
       />
@@ -30,8 +31,12 @@ export default function News() {
         <section className="mx-auto max-w-7xl px-6 pt-20 md:pt-24">
           <Reveal>
             <article className="group grid overflow-hidden rounded-3xl border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-brand-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-200/50 lg:grid-cols-2 dark:border-white/10 dark:from-ink-800 dark:via-ink-800 dark:to-ink-700">
-              <div className="relative flex min-h-56 items-center justify-center bg-gradient-to-br from-brand-600 to-ink-800 p-10 text-3xl font-bold text-white">
-                {featured.title.split(' ')[0]}
+              <div className="relative min-h-56 overflow-hidden bg-gradient-to-br from-brand-600 to-ink-800">
+                <img
+                  src={Lewegen}
+                  alt="Lewegen Trading PLC"
+                  className="h-full w-full object-cover"
+                />
                 <span className="absolute left-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold backdrop-blur">
                   Featured
                 </span>
