@@ -26,17 +26,12 @@ export default function News() {
         secondary={{ label: 'Contact Sales', to: '/contact' }}
       />
 
-      {/* Featured article */}
       {showFeatured && (
         <section className="mx-auto max-w-7xl px-6 pt-20 md:pt-24">
           <Reveal>
             <article className="group grid overflow-hidden rounded-3xl border border-brand-100 bg-gradient-to-br from-brand-50 via-white to-brand-100 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-200/50 lg:grid-cols-2 dark:border-white/10 dark:from-ink-800 dark:via-ink-800 dark:to-ink-700">
               <div className="relative min-h-56 overflow-hidden bg-gradient-to-br from-brand-600 to-ink-800">
-                <img
-                  src={Lewegen}
-                  alt="Lewegen Trading PLC"
-                  className="h-full w-full object-cover"
-                />
+                <img src={Lewegen} alt="Lewegen Trading PLC" className="h-full w-full object-cover" />
                 <span className="absolute left-5 top-5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold backdrop-blur">
                   Featured
                 </span>
@@ -57,20 +52,17 @@ export default function News() {
                   {featured.title}
                 </h2>
                 <p className="mt-3 text-slate-600 dark:text-slate-300">{featured.excerpt}</p>
-                <Link
-                  to="/contact"
-                  className="mt-6 inline-flex items-center gap-2 self-start text-sm font-semibold text-brand-600 transition-colors hover:text-brand-700"
-                >
-                  Read more
-                  <span aria-hidden>&rarr;</span>
-                </Link>
+                <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+                  {featured.body.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
               </div>
             </article>
           </Reveal>
         </section>
       )}
 
-      {/* Article grid */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <Reveal>
           <SectionHeading
@@ -120,6 +112,11 @@ export default function News() {
                     <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
                       {item.excerpt}
                     </p>
+                    <div className="mt-4 space-y-2 border-t border-brand-100 pt-4 text-sm leading-6 text-slate-600 dark:border-white/10 dark:text-slate-300">
+                      {item.body.slice(0, 2).map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
                     <div className="mt-4 flex items-center justify-between border-t border-brand-100 pt-4 dark:border-white/10">
                       <span className="text-xs text-slate-500 dark:text-slate-400">{item.readTime}</span>
                       <Link
@@ -140,7 +137,6 @@ export default function News() {
         )}
       </section>
 
-      {/* CTA banner */}
       <section className="px-6 pb-24">
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-ink-600 px-8 py-16 text-center text-white shadow-2xl shadow-ink-900/40 ring-1 ring-white/10 md:py-20">
           <div className="absolute inset-0 opacity-40">
@@ -148,12 +144,8 @@ export default function News() {
             <div className="absolute -right-10 bottom-0 h-64 w-64 rounded-full bg-accent/40 blur-3xl" />
           </div>
           <Reveal className="relative">
-            <p className="text-sm font-semibold uppercase tracking-wider text-brand-200">
-              Stay in the loop
-            </p>
-            <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-              Never Miss an Update
-            </h2>
+            <p className="text-sm font-semibold uppercase tracking-wider text-brand-200">Stay in the loop</p>
+            <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">Never Miss an Update</h2>
             <p className="mx-auto mt-4 max-w-xl text-slate-300">
               Get the latest product news, insights, and announcements delivered straight to you.
             </p>

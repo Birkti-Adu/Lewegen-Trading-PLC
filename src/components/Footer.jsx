@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 const footerLinks = [
   { to: '/', label: 'Home' },
@@ -23,11 +24,17 @@ export default function Footer() {
     <footer className="relative bg-gradient-to-br from-ink-900 via-ink-900 to-ink-800 text-slate-300 shadow-[0_-10px_30px_-12px_rgba(0,0,0,0.25)] ring-1 ring-white/5">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 font-bold text-white">
-              LT
+          <Link to="/" className="flex items-center gap-3">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white/5 p-0">
+              <img
+                src={logo}
+                alt="Lewegen Trading PLC logo"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <span className="text-lg font-bold tracking-tight text-white">
+              Lewegen<span className="text-brand-400"> Trading PLC</span>
             </span>
-            <span className="text-lg font-bold tracking-tight text-white">Lewegen Trading PLC</span>
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
            Lewegen Trading PLC is a business initiative established by the Health Development and Anti-Malaria Association (HDAMA) as a strategic income-generating enterprise designed to strengthen the organization's long-term financial sustainability and expand its humanitarian and health service delivery programs.
